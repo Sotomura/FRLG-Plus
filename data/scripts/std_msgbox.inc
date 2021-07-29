@@ -33,6 +33,8 @@ Std_ReceivedItem:: @ 81A4E66
 	call_if_eq EventScript_ReceivedItemFanfare1
 	compare VAR_0x8002, MUS_OBTAIN_KEY_ITEM
 	call_if_eq EventScript_ReceivedItemFanfare2
+	compare VAR_0x8002, MUS_OBTAIN_TMHM
+	call_if_eq EventScript_ReceivedItemFanfare3
 	message 0x0
 	waitmessage
 	waitfanfare
@@ -48,6 +50,10 @@ EventScript_ReceivedItemFanfare1:: @ 81A4EA2
 
 EventScript_ReceivedItemFanfare2:: @ 81A4EA6
 	playfanfare MUS_OBTAIN_KEY_ITEM
+	return
+
+EventScript_ReceivedItemFanfare3::
+	playfanfare MUS_OBTAIN_TMHM
 	return
 
 EventScript_ReceivedItemWaitFanfare:: @ 81A4EAA

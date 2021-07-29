@@ -866,6 +866,11 @@ Text_GiveNicknameToThisMon:: @ 81A56A7
 	.include "data/text/aide.inc"
 	.include "data/text/ingame_trade.inc"
 
+Common_EventScript_PlayGymBadgeFanfare::
+	playfanfare MUS_OBTAIN_BADGE
+	waitfanfare
+	return
+
 Text_CardKeyOpenedDoor:: @ 81A5B88
 	.string "Bingo!\n"
 	.string "The CARD KEY opened the door!$"
