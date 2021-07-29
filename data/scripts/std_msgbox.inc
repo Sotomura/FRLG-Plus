@@ -43,7 +43,7 @@ Std_ReceivedItem:: @ 81A4E66
 	return
 
 EventScript_ReceivedItemFanfare1:: @ 81A4EA2
-	playfanfare MUS_LEVEL_UP
+	playfanfare MUS_OBTAIN_ITEM
 	return
 
 EventScript_ReceivedItemFanfare2:: @ 81A4EA6

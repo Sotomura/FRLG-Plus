@@ -3785,10 +3785,13 @@ static void HandleEndTurn_BattleWon(void)
         case CLASS_PKMN_PROF:
             PlayBGM(MUS_VICTORY_GYM_LEADER);
             break;
+        case CLASS_ELITE_FOUR_2:
+            PlayBGM(MUS_VICTORY_GYM_LEADER);
+            // PlayBGM(MUS_VICTORY_LEAGUE);
+            break;
         case CLASS_BOSS:
         case CLASS_TEAM_ROCKET:
         case CLASS_COOLTRAINER_2:
-        case CLASS_ELITE_FOUR_2:
         case CLASS_GENTLEMAN_2:
         default:
             PlayBGM(MUS_VICTORY_TRAINER);
