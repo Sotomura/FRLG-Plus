@@ -1046,6 +1046,7 @@ extern const u8 gText_TrainerCardTime[];
 extern const u8 gText_Var1sTrainerCard[];
 extern const u8 gText_HallOfFameDebut[];
 extern const u8 gText_WinLossRatio[];
+extern const u8 gText_BattleTowerWinStraight[];
 extern const u8 gText_PokemonTrades[];
 extern const u8 gText_BerryCrushes[];
 extern const u8 gText_UnionRoomTradesBattles[];
