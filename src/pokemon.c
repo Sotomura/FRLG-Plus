@@ -7498,6 +7498,7 @@ static u16 GetBattleBGM(void)
             case CLASS_COOLTRAINER_2:
             case CLASS_GENTLEMAN_2:
                 return MUS_VS_TRAINER;
+            case CLASS_RIVAL:
             case CLASS_RIVAL_2:
                 return MUS_VS_RIVAL;
             default:

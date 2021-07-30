@@ -219,7 +219,7 @@ static void BikeTransition_Downhill(UNUSED u8 v)
 static void BikeTransition_Uphill(u8 direction)
 {
     if (GetBikeCollision(direction) == COLLISION_NONE)
-        PlayerGoSpeed1(direction);
+        PlayerGoSpeed2(direction); // the vanilla speed is horrific
 }
 
 static u8 GetBikeCollision(u8 direction)

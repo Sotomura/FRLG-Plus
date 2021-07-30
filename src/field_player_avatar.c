@@ -542,7 +542,10 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             if(heldKeys & B_BUTTON && FlagGet(FLAG_AUTO_RUN_TOGGLED))
             {
                 //autorun toggled but B pressed, walk
-                PlayerGoSpeed1(direction);
+                // PlayerGoSpeed1(direction);
+
+                // or not. That behaviour is inconsistent with HG/SS.
+                PlayerRun(direction);
             }
             else
             {

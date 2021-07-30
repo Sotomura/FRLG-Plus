@@ -1221,6 +1221,9 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_KANTO_MALE:
+            music = MUS_ENCOUNTER_BOY;
+            break;
         case TRAINER_ENCOUNTER_MUSIC_AQUA:
         case TRAINER_ENCOUNTER_MUSIC_MAGMA:
             music = MUS_ENCOUNTER_ROCKET;
