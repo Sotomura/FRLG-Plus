@@ -9,30 +9,41 @@ CinnabarIsland_Gym_Text_BlaineIntro:: @ 8199543
     .string "You better have BURN HEAL!$"
 
 CinnabarIsland_Gym_Text_BlaineDefeat:: @ 81995FA
-    .string "I have burned down to nothing!\n"
+    .string "I have burned down to nothing!$"
+
+CinnabarIsland_Gym_Text_BlaineAfterDefeat::
+    .string "Awesome. I have burned out…\n"
     .string "Not even ashes remain!\p"
     .string "You have earned the VOLCANOBADGE.$"
 
-CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove:: @ 8199652
-    .string "FIRE BLAST is the ultimate fire\n"
-    .string "technique.\p"
-    .string "Don't waste it on WATER POKéMON.$"
+CinnabarIsland_Gym_Text_ReceivedBadge::
+    .string "{PLAYER} received the VOLCANOBADGE\n"
+    .string "from BLAINE!$"
+
+CinnabarIsland_Gym_Text_BlainePostBattle::
+    .string "The fire inside me is only\n"
+    .string "going to get stronger!\p"
+    .string "Let's battle again sometime!$"
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge:: @ 819969E
     .string "Hah!\p"
     .string "The VOLCANOBADGE heightens the\n"
-    .string "SPECIAL stats of your POKéMON.\p"
+    .string "SPECIAL stats of your POKéMON.$"
+
+CinnabarIsland_Gym_Text_BlaineTakeThis:: @ 819969E
     .string "Here, you can have this, too!$"
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine:: @ 81996FF
     .string "{PLAYER} received TM38\n"
     .string "from BLAINE.$"
 
-CinnabarIsland_Gym_Text_BlainePostBattle:: @ 819971D
+CinnabarIsland_Gym_Text_ExplainTM38:: @ 819971D
     .string "TM38 contains FIRE BLAST.\n"
+    .string "It is is the ultimate fire technique.\p"
     .string "Teach it to FIRE-type POKéMON.\p"
     .string "VULPIX or CHARMELEON would be\n"
-    .string "ideal for that move.$"
+    .string "ideal for that move.\p"
+    .string "Just don't waste it on WATER POKéMON!$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis:: @ 8199789
     .string "Make space for this, child!$"

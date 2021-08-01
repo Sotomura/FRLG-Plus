@@ -13,9 +13,15 @@ FuchsiaCity_Gym_Text_KogaIntro:: @ 819832E
 
 FuchsiaCity_Gym_Text_KogaDefeat:: @ 8198444
     .string "Humph!\n"
-    .string "You have proven your worth!\p"
+    .string "You have proven your worth!$"
+
+FuchsiaCity_Gym_Text_KogaAfterDefeat::
     .string "Here!\n"
     .string "Take the SOULBADGE!$"
+
+FuchsiaCity_Gym_Text_ReceivedBadge::
+    .string "{PLAYER} received the SOULBADGE\n"
+    .string "from KOGA!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle:: @ 8198481
     .string "When afflicted by TOXIC, a POKéMON\n"
@@ -28,7 +34,9 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge:: @ 819850E
     .string "Now that you have the SOULBADGE,\n"
     .string "the DEFENSE of your POKéMON rises.\p"
     .string "It also lets you SURF outside of\n"
-    .string "battle.\p"
+    .string "battle.$"
+
+FuchsiaCity_Gym_Text_KogaTakeThis::
     .string "Ah!\n"
     .string "Take this, too!$"
 

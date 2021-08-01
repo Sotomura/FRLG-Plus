@@ -529,7 +529,9 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             if(heldKeys & B_BUTTON && FlagGet(FLAG_AUTO_RUN_TOGGLED))
             {
                 //autorun toggled but B pressed, walk
-                PlayerGoSlow(direction);
+                // PlayerGoSlow(direction);
+
+                PlayerRunSlow(direction);
             }
             else
             {

@@ -1226,6 +1226,7 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_AQUA:
         case TRAINER_ENCOUNTER_MUSIC_MAGMA:
+        case TRAINER_ENCOUNTER_MUSIC_KANTO_SUS:
             music = MUS_ENCOUNTER_ROCKET;
             break;
         default:
