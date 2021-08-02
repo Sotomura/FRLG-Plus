@@ -111,14 +111,12 @@ PewterCity_Gym_Text_YoureChampMaterial:: @ 819143C
     .string "You're POKéMON champ material!$"
 
 PewterCity_Gym_Text_GymStatue:: @ 819146E
-    .string "PEWTER POKéMON GYM\n"
-    .string "LEADER: BROCK\p"
-    .string "WINNING TRAINERS:\n"
+    .string "PEWTER CITY POKéMON GYM\p"
+	.string "BROCK'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon:: @ 81914A4
-    .string "PEWTER POKéMON GYM\n"
-    .string "LEADER: BROCK\p"
-    .string "WINNING TRAINERS:\n"
+    .string "PEWTER CITY POKéMON GYM\p"
+	.string "BROCK'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

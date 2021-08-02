@@ -165,14 +165,12 @@ ViridianCity_Gym_Text_GymGuyPostVictory:: @ 818FB56
     .string "GYM LEADER of VIRIDIAN?$"
 
 ViridianCity_Gym_Text_GymStatue:: @ 818FB8D
-    .string "VIRIDIAN POKéMON GYM\n"
-    .string "LEADER: ?\p"
-    .string "WINNING TRAINERS:\n"
+    .string "VIRIDIAN CITY POKéMON GYM\p"
+	.string "CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon:: @ 818FBC1
-    .string "VIRIDIAN POKéMON GYM\n"
-    .string "LEADER: GIOVANNI\p"
-    .string "WINNING TRAINERS:\n"
+    .string "VIRIDIAN CITY POKéMON GYM\p"
+	.string "GIOVANNI'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

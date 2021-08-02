@@ -155,14 +155,12 @@ SaffronCity_Gym_Text_GymGuyPostVictory:: @ 819BDBB
     .string "at the slots!$"
 
 SaffronCity_Gym_Text_GymStatue:: @ 819BDFE
-    .string "SAFFRON POKéMON GYM\n"
-    .string "LEADER: SABRINA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "SAFFRON CITY POKéMON GYM\p"
+	.string "SABRINA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon:: @ 819BE37
-    .string "SAFFRON POKéMON GYM\n"
-    .string "LEADER: SABRINA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "SAFFRON CITY POKéMON GYM\p"
+	.string "SABRINA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

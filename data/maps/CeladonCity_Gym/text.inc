@@ -147,14 +147,12 @@ CeladonCity_Gym_Text_MaryPostBattle:: @ 819783E
     .string "Wait until next time!$"
 
 CeladonCity_Gym_Text_GymStatue:: @ 8197874
-    .string "CELADON POKéMON GYM\n"
-    .string "LEADER: ERIKA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CELADON CITY POKéMON GYM\p"
+	.string "ERIKA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 CeladonCity_Gym_Text_GymStatuePlayerWon:: @ 81978AB
-    .string "CELADON POKéMON GYM\n"
-    .string "LEADER: ERIKA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CELADON CITY POKéMON GYM\p"
+	.string "ERIKA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

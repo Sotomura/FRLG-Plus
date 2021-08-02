@@ -92,14 +92,12 @@ CeruleanCity_Gym_Text_WeMakePrettyGoodTeam:: @ 8192688
     .string "darn-good team!$"
 
 CeruleanCity_Gym_Text_GymStatue:: @ 81926E1
-    .string "CERULEAN POKéMON GYM\n"
-    .string "LEADER: MISTY\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CERULEAN CITY POKéMON GYM\p"
+	.string "MISTY'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon:: @ 8192719
-    .string "CERULEAN POKéMON GYM\n"
-    .string "LEADER: MISTY\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CERULEAN CITY POKéMON GYM\p"
+	.string "MISTY'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

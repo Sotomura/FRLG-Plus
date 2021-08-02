@@ -149,15 +149,13 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory:: @ 8199C0C
     .string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue:: @ 8199C29
-    .string "CINNABAR POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CINNABAR ISLAND POKéMON GYM\p"
+	.string "BLAINE'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon:: @ 8199C62
-    .string "CINNABAR POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CINNABAR ISLAND POKéMON GYM\p"
+	.string "BLAINE'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
 CinnabarIsland_Gym_Text_PokemonQuizRules:: @ 8199C9F

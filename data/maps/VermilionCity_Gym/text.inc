@@ -110,15 +110,13 @@ VermilionCity_Gym_Text_GymGuyPostVictory:: @ 81951EC
     .string "That match was electric!$"
 
 VermilionCity_Gym_Text_GymStatue:: @ 819520B
-    .string "VERMILION POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "VERMILION CITY POKéMON GYM\p"
+	.string "LT. SURGE'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon:: @ 8195248
-    .string "VERMILION POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "VERMILION CITY POKéMON GYM\p"
+	.string "LT. SURGE'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere:: @ 8195289

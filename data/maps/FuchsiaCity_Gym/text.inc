@@ -151,14 +151,12 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory:: @ 8198B1D
     .string "even now!$"
 
 FuchsiaCity_Gym_Text_GymStatue:: @ 8198B4B
-    .string "FUCHSIA POKéMON GYM\n"
-    .string "LEADER: KOGA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "FUCHSIA CITY POKéMON GYM\p"
+	.string "KOGA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon:: @ 8198B81
-    .string "FUCHSIA POKéMON GYM\n"
-    .string "LEADER: KOGA\p"
-    .string "WINNING TRAINERS:\n"
+    .string "FUCHSIA CITY POKéMON GYM\p"
+	.string "KOGA'S CERTIFIED TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
