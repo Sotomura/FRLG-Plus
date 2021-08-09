@@ -26,6 +26,7 @@
 #include "renewable_hidden_items.h"
 #include "trainer_tower.h"
 #include "script.h"
+#include "lottery_corner.h"
 #include "berry_powder.h"
 #include "pokemon_jump.h"
 #include "event_scripts.h"
@@ -142,6 +143,7 @@ void NewGameInitData(void)
     ClearEnigmaBerries();
     InitEasyChatPhrases();
     ResetTrainerFanClub();
+    ResetLotteryCorner();
     UnionRoomChat_InitializeRegisteredTexts();
     ResetMiniGamesResults();
     InitMEventData();

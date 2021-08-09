@@ -1016,6 +1016,7 @@ EventScript_WallTownMap:: @ 81A6C32
 
 	.include "data/text/pokedex_rating.inc"
 	.include "data/scripts/pokedex_rating.inc"
+	.include "data/text/lottery_corner.inc"
 	.include "data/scripts/cave_of_origin.inc"
 
 EventScript_ChangePokemonNickname:: @ 81A74EB
