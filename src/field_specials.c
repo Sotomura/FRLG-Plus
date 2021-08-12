@@ -2240,7 +2240,8 @@ void RunMassageCooldownStepCounter(void)
 void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
-    VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
+    FlagSet(FLAG_DAILY_DAISY_MASSAGE);
+    // VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
 }
 
 static const u16 sEliteFourLightingPalettes[][16] = {

@@ -21,6 +21,9 @@
 #include "gpu_regs.h"
 #include "constants/rgb.h"
 
+// CURRENTLY CORRUPTS BOX DATA (and possibly more)
+// DIAGNOSE BEFORE MAKING THIS WORK.
+
 struct ResetRtcStruct
 {
     /*0x0*/ u8 dataIndex;

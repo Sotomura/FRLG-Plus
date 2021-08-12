@@ -5,6 +5,7 @@
 #include "m4a.h"
 #include "scanline_effect.h"
 #include "graphics.h"
+#include "event_data.h"
 #include "help_system.h"
 #include "intro.h"
 #include "load_save.h"
@@ -622,10 +623,8 @@ static void SetTitleScreenScene_Run(s16 * data)
             DestroyTask(FindTaskIdByFunc(Task_TitleScreenMain));
             SetMainCallback2(CB2_FadeOutTransitionToSaveClearScreen);
         }
-        else if (JOY_HELD(KEYSTROKE_RESET_RTC) == KEYSTROKE_RESET_RTC) // && CanResetRTC() == TRUE
+        else if (JOY_HELD(KEYSTROKE_RESET_RTC) == KEYSTROKE_RESET_RTC) // && CanResetRTC() == TRUE 
         {
-            // FadeOutBGM(4);
-            // BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
             ScheduleHideSlashSprite(data[6]);
             DestroyTask(FindTaskIdByFunc(Task_TitleScreenMain));
             SetMainCallback2(CB2_FadeOutTransitionToResetRtcScreen);
@@ -746,13 +745,13 @@ static void SetTitleScreenScene_Cry(s16 * data)
             u8 ChangedCalcBackup = gSaveBlock1Ptr->keyFlags.changedCalcMode;
             u8 noPMCBackup = gSaveBlock1Ptr->keyFlags.noPMC;
             u8 expModBackup = gSaveBlock1Ptr->keyFlags.expMod;
-            SeedRngAndSetTrainerId();
-            SetSaveBlocksPointers();
-            ResetMenuAndMonGlobals();
-            Save_ResetSaveCounters();
-            Save_LoadGameData(SAVE_NORMAL);
-            if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_INVALID)
-                Sav2_ClearSetDefault();
+            // SeedRngAndSetTrainerId();
+            // SetSaveBlocksPointers();
+            // ResetMenuAndMonGlobals();
+            // Save_ResetSaveCounters();
+            // Save_LoadGameData(SAVE_NORMAL);
+            // if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_INVALID)
+            //     Sav2_ClearSetDefault();
             gSaveBlock1Ptr->keyFlags.version = KeyVersionBackup;
             gSaveBlock1Ptr->keyFlags.difficulty = KeyDifficultyBackup;
             gSaveBlock1Ptr->keyFlags.nuzlocke = KeyNuzlockeBackup;
@@ -761,8 +760,8 @@ static void SetTitleScreenScene_Cry(s16 * data)
             gSaveBlock1Ptr->keyFlags.changedCalcMode = ChangedCalcBackup;
             gSaveBlock1Ptr->keyFlags.noPMC = noPMCBackup;
             gSaveBlock1Ptr->keyFlags.expMod = expModBackup;
-            SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
-            InitHeap(gHeap, HEAP_SIZE);
+            // SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
+            // InitHeap(gHeap, HEAP_SIZE);
             SetMainCallback2(CB2_InitMainMenu);
             DestroyTask(FindTaskIdByFunc(Task_TitleScreenMain));
         }

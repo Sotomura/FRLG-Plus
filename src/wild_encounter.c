@@ -367,11 +367,15 @@ static u16 GenerateFishingEncounter(const struct WildPokemonInfo * info, u8 rod)
     return info->wildPokemon[slot].species;
 }
 
-static bool8 DoWildEncounterRateDiceRoll(u16 a0)
+static bool8 DoWildEncounterRateDiceRoll(u16 encounterRate)
 {
-    if (WildEncounterRandom() % 1600 < a0)
+    // if (WildEncounterRandom() % 1600 < a0)
+    //     return TRUE;
+    // return FALSE;
+    if (Random() % 2880 < encounterRate)
         return TRUE;
-    return FALSE;
+    else
+        return FALSE;
 }
 
 static bool8 DoWildEncounterRateTest(u32 encounterRate, bool8 ignoreAbility)
@@ -394,8 +398,8 @@ static bool8 DoWildEncounterRateTest(u32 encounterRate, bool8 ignoreAbility)
             break;
         }
     }
-    if (encounterRate > 1600)
-        encounterRate = 1600;
+    if (encounterRate > 2880)
+        encounterRate = 2880;
     return DoWildEncounterRateDiceRoll(encounterRate);
 }
 

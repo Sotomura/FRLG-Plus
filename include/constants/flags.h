@@ -530,7 +530,7 @@
 #define FLAG_HIDE_ARTISAN_CAVE_B1F_CARBOS                       0x204 //New
 
 // Unused?
-#define FLAG_0x205               0x205
+#define FLAG_POKERUS_EXPLAINED   0x205 //New
 #define FLAG_0x206               0x206
 #define FLAG_0x207               0x207
 #define FLAG_0x208               0x208
@@ -943,11 +943,11 @@
 
 #define FLAG_DAILY_PICKED_LOTO_TICKET               0x390
 #define FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY        0x391
-#define FLAG_0x392               0x392
-#define FLAG_0x393               0x393
-#define FLAG_0x394               0x394
-#define FLAG_0x395               0x395
-#define FLAG_0x396               0x396
+#define FLAG_DAILY_BERRY_MASTER_RECEIVED_BERRY      0x392
+#define FLAG_DAILY_ROUTE_120_RECEIVED_BERRY         0x393
+#define FLAG_DAILY_LILYCOVE_RECEIVED_BERRY          0x394
+#define FLAG_DAILY_ROUTE_111_RECEIVED_BERRY         0x395
+#define FLAG_DAILY_DAISY_MASSAGE                    0x396
 #define FLAG_0x397               0x397
 #define FLAG_0x398               0x398
 #define FLAG_0x399               0x399

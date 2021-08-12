@@ -532,6 +532,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
                 // PlayerGoSlow(direction);
 
                 PlayerRunSlow(direction);
+                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
             }
             else
             {
@@ -548,6 +549,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
 
                 // or not. That behaviour is inconsistent with HG/SS.
                 PlayerRun(direction);
+                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
             }
             else
             {
