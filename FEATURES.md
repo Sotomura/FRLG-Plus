@@ -1,5 +1,24 @@
 ## Features
 
+#### Features specific to this branch
+This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style modernizations that were out-of-scope of the original branch. These changes aim to make FireRed and LeafGreen feel closer to a modern Pokémon game than the originals did, while still incorporating all of FRLG-Plus’s quality-of-life improvements. It is fully compatible with save files from FRLG-Plus.
+- A Real-Time Clock has been added, matching that of Emerald’s. This implementation is compatible with modern emulators.
+	- The clock is present and can be set in the player’s room.
+	- Pokémon that evolve via happiness depending on the time of day will now evolve that way.
+	- Pokémon may now be affected by Pokérus, and can spread it to other Pokémon and eventually be cured of it, akin to Ruby, Sapphire and Emerald.
+	- The Lottery Corner has been added to the Celadon Dept. Store.
+	- Various daily NPCs in the pre- and post-game have been added, and will hand out Berries.
+		- Daisy now grooms Pokémon daily, rather than relying on the step-based counter.
+	- The clock may be reset by holding `Left` + `Select` + `B`.
+- Randomness is now determined by the Real-Time Clock, much like Ruby/Sapphire and contemporary Pokémon games.
+	- Wild Pokémon encounters are also seeded by the clock, so are now random per-frame rather than pre-determined on map load.
+- Music and sound effects have been changed to match the behaviors of newer Pokémon games.
+	- Trainers have different themes based on their class, matching Ruby, Sapphir and Emerald.
+	- The Item, TM and Berry Get fanfares are now used, the Badge Get fanfare plays after every Gym battle, and route music plays inside buildings.
+- Doors — namely the Viridian and Cinnabar Gym doors — no longer force you away from them.
+- Some small dialogue changes — Gym Leader post-match comments, the player character’s comments on bookshelves, and other things — have been made to match the Advance games.
+
+
 #### Mechanical Additions:
 - A Key System has been implemented, similar to Black 2 and White 2. Press the L Button while on the Key System Menu to access the Help System, which has detailed information on each key. Use the keys to change various settings about your game. Those settings are:
 	*  __Version__: Switch between FireRed and LeafGreen to catch version-exclusive Pokémon.

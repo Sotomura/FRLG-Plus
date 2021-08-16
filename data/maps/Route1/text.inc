@@ -24,7 +24,7 @@ Route1_Text_CanJumpFromLedges:: @ 81833B9
 
 Route1_Text_RouteSign:: @ 818343A
     .string "ROUTE 1\n"
-    .string "PALLET TOWN - VIRIDIAN CITY$"
+		.string "{UP_ARROW} VIRIDIAN CITY$"
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese: @ 82A7BB0
 	.string "Hi, what's your name?\p"
