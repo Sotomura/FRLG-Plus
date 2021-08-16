@@ -11,10 +11,10 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 		- Daisy now grooms Pokémon daily, rather than relying on the step-based counter.
 	- The clock may be reset by holding `Left` + `Select` + `B` on the title screen.
 - Randomness is now determined by the Real-Time Clock, much like Ruby/Sapphire and contemporary Pokémon games.
-	- Wild Pokémon encounters are also seeded by the clock, so are now random per-frame rather than pre-determined on map load.
-- The player’s Trainer Card now displays Battle Tower win count and straight win records, replacing Berry Crush records. Berry Crush scores are still displayed for players who have not participated in the Tower.
+	- Wild Pokémon encounters are also seeded by the clock like in RS, so are now random per-frame rather than pre-determined on map load.
+- The player’s Trainer Card now displays Battle Tower win count and straight win records, replacing Berry Crush records. Berry Crush high scores still displayed for players who have not participated in the Battle Tower.
 - Music and sound effects have been changed to match the behaviors of newer Pokémon games.
-	- Trainers have different themes based on their class, matching Ruby, Sapphir and Emerald.
+	- Trainers have different themes based on their class, matching Ruby, Sapphire and Emerald.
 	- The Item, TM and Berry Get fanfares are now used, the Badge Get fanfare plays after every Gym battle, and route music plays inside buildings.
 - Doors — namely the Viridian and Cinnabar Gym doors — no longer force you away from them.
 - Some small dialogue changes — Gym Leader post-match comments, the player character’s comments on bookshelves, and other things — have been made to match the Advance games.
