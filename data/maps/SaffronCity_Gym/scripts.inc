@@ -34,7 +34,7 @@ SaffronCity_Gym_EventScript_Sabrina_ChallengeMode::
 	trainerbattle_single TRAINER_LEADER_SABRINA_CHALLENGE, SaffronCity_Gym_Text_SabrinaIntro, SaffronCity_Gym_Text_SabrinaDefeat, SaffronCity_Gym_EventScript_DefeatedSabrina, NO_MUSIC
 	settrainerflag TRAINER_LEADER_SABRINA
 	goto_if_unset FLAG_GOT_TM04_FROM_SABRINA, SaffronCity_Gym_EventScript_GiveTM04
-	msgbox SaffronCity_Gym_Text_ExplainTM04
+	msgbox SaffronCity_Gym_Text_SabrinaPostBattle
 	release
 	end
 
