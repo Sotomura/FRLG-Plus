@@ -9,7 +9,7 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 	- The Lottery Corner has been added to the Celadon Dept. Store.
 	- Various daily NPCs in the pre- and post-game have been added, and will hand out Berries.
 		- Daisy now grooms Pokémon daily, rather than relying on the step-based counter.
-	- The clock may be reset by holding `Left` + `Select` + `B`.
+	- The clock may be reset by holding `Left` + `Select` + `B` on the title screen.
 - Randomness is now determined by the Real-Time Clock, much like Ruby/Sapphire and contemporary Pokémon games.
 	- Wild Pokémon encounters are also seeded by the clock, so are now random per-frame rather than pre-determined on map load.
 - Music and sound effects have been changed to match the behaviors of newer Pokémon games.
