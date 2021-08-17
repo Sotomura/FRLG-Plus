@@ -1,7 +1,7 @@
 ## Features
 
 #### Features specific to this branch
-This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style modernizations that were out-of-scope of the original branch. These changes aim to make FireRed and LeafGreen feel closer to a modern Pokémon game than the originals did, while still incorporating all of FRLG-Plus’s quality-of-life improvements. It is fully compatible with save files from FRLG-Plus.
+This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style modernizations that were out-of-scope of the original branch. These changes aim to make FireRed and LeafGreen feel closer to a modern Pokémon game than the originals did, while still incorporating all of FireRed and LeafGreen+’s quality-of-life improvements. It is fully compatible with save files from FireRed and LeafGreen+.
 - A Real-Time Clock has been added, matching that of Emerald’s. This implementation is compatible with modern emulators.
 	- The clock is present and can be set in the player’s room.
 	- Pokémon that evolve via happiness depending on the time of day will now evolve that way.
