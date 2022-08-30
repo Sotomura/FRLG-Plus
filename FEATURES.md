@@ -30,7 +30,7 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 	* __No Free Heals__: Can disable free party heals, most notably the Pokémon Center heals and the Lavender Tower purified zone, but also many others. This also prevents PC Boxes from healing Pokémon deposited into them.
 	* __Exp. Modifier__: Can alter experience gains using a multiplier. The possible options are 0×, 1/2×, 1×, and 2×.
 
-- Nuzlocke Info: This is a special implementation of the Nuzlocke ruleset. While the Nuzlocke toggle is on, fainted Pokémon cannot be healed by any means (including depositing them in a PC Box). Like under a standard Nuzlocke ruleset, only the first Pokémon caught or received from NPCs in an area is usable, but under this implementation Pokémon other than the first may be caught, they will just be automatically fainted after capture. Pokémon captured in this way will not count for the dupe clause (A Rattata will count as a first encounter on Route 2 if you caught a fainted Rattata on Route 1). Pokémon that are already owned, or evolutionary relatives of already owned Pokémon, will not count if they are the first encounter in an area and not caught. There is a UI element drawn to the enemy's healthbar to indicate if it counts as the first encounter in an area. If a white out occurs, the player will be prompted to grab a usable Pokémon from their PC Box. If there are no usable Pokémon left, they will be given a choice of soft-resetting or turning off the Nuzlocke toggle and healing their party normally. These rules do not come into effect until after the first Rival battle. Encounters are not tracked while the Nuzlocke toggle is off and are not retroactive (starting a Nuzlocke midway through a regular playthrough will allow new "first" encounters). Additionally, encounters are not tracked before the player obtains the Pokédex, to prevent losing the opportunity to catch Route 1 Pokémon before catching Pokémon is possible. Each outdoor Safari Zone map counts as a separate area for the purposes of catching Pokémon. The player is not asked whether or not they want to give a nickname to obtained Pokémon while Nuzlocke Mode is on. In-game trades will be fainted if the Pokémon traded for them was fainted but will be usable if not, and otherwise do not count as a first encounter. In-game trades do invoke the dupe clause for additional Pokémon of that species.
+- Nuzlocke Info: This is a special implementation of the Nuzlocke ruleset. While the Nuzlocke toggle is on, fainted Pokémon cannot be healed by any means (including depositing them in a PC Box). Like under a standard Nuzlocke ruleset, only the first Pokémon caught or received from NPCs in an area is usable, but under this implementation Pokémon other than the first may be caught, they will just be automatically fainted after capture. Pokémon captured in this way will not count for the dupe clause (A Rattata will count as a first encounter on Route 2 if you caught a fainted Rattata on Route 1). Pokémon that are already owned, or evolutionary relatives of already owned Pokémon, will not count if they are the first encounter in an area and not caught. There is a UI element drawn to the enemy's healthbar to indicate if it counts as the first encounter in an area. If a white out occurs, the player will be prompted to grab a usable Pokémon from their PC Box. If there are no usable Pokémon left, they will be given a choice of soft-resetting or turning off the Nuzlocke toggle and healing their party normally. These rules do not come into effect until after the first Rival battle. Encounters are not tracked while the Nuzlocke toggle is off and are not retroactive (starting a Nuzlocke midway through a regular playthrough will allow new "first" encounters). Additionally, encounters are not tracked before the player obtains the Pokédex, to prevent losing the opportunity to catch Route 1 Pokémon before catching Pokémon is possible. Each outdoor Safari Zone map counts as a separate area for the purposes of catching Pokémon. The player is not asked whether or not they want to give a nickname to obtained Pokémon while Nuzlocke Mode is on. In-game trades will be fainted if the Pokémon traded for them was fainted but will be usable if not, and otherwise do not count as a first encounter. In-game trades do invoke the dupe clause for additional Pokémon of that species. Eggs, when hatched, will set the encounter flag of the place the egg was first obtained. If that place already had a first encounter, then the egg will hatch fainted.
 
 #### Story Changes:
 - The player may progress to the Sevii Islands postgame content immediately after becoming the Champion; the National Dex is no longer required to do so.
@@ -56,7 +56,7 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 		* The Master Trainers for Ditto, Articuno, Zapdos, Moltres, Mewtwo, and Mew want to see Pokémon with 100 total Effort Values.
 		* Master Trainers that would have been on Cycling Road have been moved to Routes 16 and 18.
 			* Additionally, some Master Trainers have been repositioned on their maps to account for FRLG area design.
-		* Clearing a Master Trainer confers a title that can be used in link battles with other FRLG++ players.
+		* Clearing a Master Trainer confers a title that can be used in link battles with other FRLG+ players.
 		* Clearing all 151 Master Trainers unlocks a secret superboss Trainer.
 
 #### Quality of Life Changes:
@@ -65,7 +65,7 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 - Running indoors.
 - Toggle auto running with the R button.
 - Cut trees stay cut permanently.
-- Hold B while surfing to go faster.
+- Hold B while surfing to go faster. If autorun is enabled, hold B to go slower, as the faster speed becomes default.
 - The bike now has two gears, one for the default speed, and one for Mach Bike speed. Press B while biking to switch between them.
 - The Victory Road boulder puzzles no longer reset.
 - The two boulders that block access to Mt. Ember's exterior will no longer block the way once the player moves past them.
@@ -75,18 +75,33 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 ##### Inventory and Item-related:
 - Expanded item pockets. The player can hold one stack of every legally obtainable item at once.
 - Two new pockets, the Medicine and Held Items pockets, have been introduced to ease bag navigation.
+- Press Start in the bag to sort items by several criteria.
+- The bag pockets wrap around when switching between them.
+- Left and Right in the TM Case and Berry Pouch scrolls faster.
 - Infinite TM usage. TM prices have been modified to reflect this. TMs do not restore PP when learned, like in BW/B2W2.
 - EV-reducing berries ported from Emerald (the Pomeg glitch was fixed during the port). Otherwise worthless berries obtainable as hidden items or through Pickup have been changed to these.
 - When a repel expires, the player will be asked whether they want to use another immediately, like in Black 2 and White 2.
 - The Generation III Poké Ball varieties can be purchased in Silph Co. after it has been liberated from Team Rocket.
 - The Light Ball is held rarely by Pikachu outside of Viridian Forest, making it obtainable without trading.
 - LGPE-style bonus Premier Balls in shops. Buying multiples of ten of any Poké Ball type will give bonus Premier Balls.
+- Trade evolution items are now available before the postgame.
+	* Up-grade can be found in Silph Co.
+	* Metal Coats can be found rarely on wild Magnemite and Magneton.
+	* Dragon Scales can be found rarely on wild Dratini and Dragonair.
+	* King's Rocks can be found rarely on wild Poliwhirl and Slowbro.
+	* Deep Sea Scales can be found rarely on wild Chinchou underwater.
+	* Deep Sea Teeth can be found rarely on wild Gyarados underwater.
 
 ##### Battle-related:
-- Health bar drains faster at higher HP levels.
-- Battle animation speed setting in the options menu. When set to fast, the slide-in animation at the start of every battle is skipped, health bars animate much faster, and pressing the A or B button during text delays will skip them. When set to instant, health and experience bars will animate instantly in addition to everything that the fast setting offers.
+- New options available in the options menu to speed up battles:
+	* Battle Transitions setting turns off the transition animation between the field and a battle.
+	* Battle Intro Animation setting turns off the sliding animation that occurs at the start of every battle.
+	* Battle Scene has been renamed to Move Animations and now also skips in-battle text delays when it is off.
+	* HP Bar Animation Speed gives four options for how fast the HP bar animates, including instant.
+	* Exp. Bar Animation Speed gives the player the choice to make experience bars animate instantly.
 - New battle style option, switch, which is like shift but doesn't tell what the opponent is switching in. Shift has been renamed to predict.
 - Press B on the "What will Pokémon do?" menu during wild battles to move the cursor to run.
+- A message is now printed at the end of a battle if a Pokémon has gained an item through the Pickup ability.
 
 ##### Move Tutor-related:
 - There are eight new Move Tutors scattered throughout the world that teach Fury Cutter, Rollout, Dynamic Punch, Sleep Talk, Nightmare, Self-Destruct, Sky Attack, and Swagger respectively.
@@ -134,11 +149,15 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 #### Vanilla Bug Fixes:
 - All Revision 1 fixes are included here. This includes the missing "Presents" graphic in the intro, and several Pokédex errors and oversights.
 - The Nugget Bridge Rocket can no longer give the player infinite Nuggets.
-- Vital Throw displays as --- accuracy instead of 100 accuracy.
+- Assist, Block, Camouflage, Charge, Conversion 2, Follow Me, Grudge, Helping Hand, Imprison, Ingrain, Magic Coat, Mean Look, Memento, Mimic, Mud Sport, Nightmare, Pain Split, Recycle, Refresh, Role Play, Skill Swap, Slack Off, Snatch, Softboiled, Spider Web, Tail Glow, Vital Throw, Water Sport, Wish and Yawn display as --- accuracy instead of 100 accuracy.
 - The misspelling of "Pokcet" in the Teachy TV program has been fixed.
 - Raikou and Entei will not disappear if they Roar the player out of their battles.
 	* The roaming IV glitch will __not__ be fixed, as it affects the legality of the legendary beasts.
 - Fixed Karate King Koichi and Charine localization oversights. These characters are now named Kiyo and Janine as they are in GSC/HGSS.
+- Fixed bug where the AI would decide to use Foresight based on the user's type and stats instead of the target's.
+- Fixed bug where the AI would incorrectly decide to try to stall with semi-invulnerable moves while a weather effect is damaging them.
+- Fixed bug where the AI would decide to use Facade based on the target's status instead of its own.
+- Fixed an oversight where Icefall Cave's cracked ice tiles could spawn wild encounters. If a wild encounter is generated on one, it does not crack, allowing the player to cheat the puzzle.
 - Many vanilla tile errors have been fixed. Too many.
 
 #### Miscellaneous Changes:
@@ -150,3 +169,5 @@ This “PlusPlus” branch contains additional Ruby/Sapphire/Emerald-style moder
 - Some aesthetic and music changes which are mostly confined to the Sevii Islands to make each island more distinct.
 - Cycling Road forces the bike theme, like in RGBY.
 - Emerald's player character designs show in the link rooms if linking with Emerald.
+- The original RGBY textbox is available as frame type 11 in the options menu.
+- The Gambler trainer class has been decensored.

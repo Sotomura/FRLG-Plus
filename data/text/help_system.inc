@@ -672,6 +672,9 @@ Help_Text_UsingHallOfFame:: @ 81B5A37
 Help_Text_UsingKeySystem:: @ 81B5A37
 	.string " Using “KEY SYSTEM SETTINGS”$"
 
+Help_Text_SortingBag::
+	.string "  Sorting the BAG$"
+
 Help_Text_HowToUsePokedex:: @ 81B5A4D
 	.string "{CIRCLE_1} Select “POKéDEX” on the MENU.\n"
 	.string "{CIRCLE_2} Choose POKéMON using commands such\n"
@@ -768,8 +771,8 @@ Help_Text_HowToUseOption:: @ 81B6203
 	.string "   Pad to select an optional item, then\n"
 	.string "   press left or right to alter the\n"
 	.string "   settings.\n"
-	.string "{CIRCLE_3} Press the A or B Button after\n"
-	.string "   making changes to save them.$"
+	.string "{CIRCLE_3} Press the B Button after making\n"
+	.string "   changes to save them.$"
 
 Help_Text_HowToUsePotion:: @ 81B62E4
 	.string "{CIRCLE_1} Open the MENU.\n"
@@ -1066,6 +1069,14 @@ Help_Text_HowToUseKeySystemSettings::
 	.string "{CIRCLE_3} Press the A or B Button after\n"
 	.string "   making changes to save them.$"
 
+Help_Text_HowToSortBag::
+	.string "{CIRCLE_1} Press START while in the BAG menu.\n"
+	.string "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
+	.string "   Pad to select a sorting scheme.\n"
+	.string "Depending on the POCKET, items can be\n"
+	.string "sorted by NAME, TYPE, AMOUNT, and\n"
+	.string "NUMBER.$"
+
 Help_Text_HP:: @ 81B7CC1
 	.string "HP$"
 
@@ -1166,7 +1177,7 @@ Help_Text_Frame:: @ 81B7DC6
 	.string "FRAME$"
 
 Help_Text_Cancel2:: @ 81B7DCC
-	.string "CANCEL$"
+	.string "SAVE AND EXIT$"
 
 Help_Text_TM:: @ 81B7DD3
 	.string "TM$"
@@ -1429,8 +1440,9 @@ Help_Text_DefineTextSpeed:: @ 81B9170
 	.string "FAST, or INSTANT.$"
 
 Help_Text_DefineBattleScene:: @ 81B91C2
-	.string "You can choose to turn the battle\n"
-	.string "animation ON or OFF.$"
+	.string "Press the A Button to go to a submenu\n"
+	.string "with options to change battle-related\n"
+	.string "animations and delays.$"
 
 Help_Text_DefineBattleStyle:: @ 81B91F9
 	.string "You can choose whether or not you can\n"
@@ -1982,17 +1994,99 @@ Help_Text_TypeMatchupOwnPokemonBug:: @ 81BB156
 	.string "   {CIRCLE_DOT}: FIRE, FLYING, ROCK\p"
 	.string "   {TRIANGLE}: GRASS, FIGHTING, GROUND$"
 
-Help_Text_DefineBattleAnimSpeed::
-	.string "Set this option to FAST to skip the\n"
-	.string "slide-in animation that occurs at the\l"
-	.string "start of every battle and make HP Bars\l"
-	.string "animate more quickly. Pressing the A or\l"
-	.string "B Button will also skip in-battle text\l"
-	.string "delays. INSTANT is like FAST but HP and\l"
-	.string "EXP. Bars animate instantly.$"
+Help_Text_UsingOptionsSubmenu:: @ 81B5A37
+	.string " Using “BATTLE SCENE”$"
 
-Help_Text_BattleAnimSpeed::
-	.string "BATTLE ANIM SPEED$"
+Help_Text_HowToUseOptionSubmenu::
+	.string "{CIRCLE_1} Select “BATTLE SCENE” on the MENU.\n"
+	.string "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
+	.string "   Pad to select an optional item, then\n"
+	.string "   press left or right to alter the\n"
+	.string "   settings.\n"
+	.string "{CIRCLE_3} Press the A or B Button after\n"
+	.string "   making changes to go back.$"
+
+Help_Text_DefineBattleTransitions::
+	.string "Set this option to OFF to skip the\n"
+	.string "animations that play while transitioning\n"
+	.string "from the field to a battle.\n"
+	.string "When set to OFF, the screen cuts to\n"
+	.string "black and then instantly moves to the\n"
+	.string "battlefield. This does not skip some\n"
+	.string "special TRAINER battle transitions.$"
+
+Help_Text_DefineBattleIntroAnims::
+	.string "Set this option to OFF to skip the\n"
+	.string "sliding animations that happen at the\n"
+	.string "start of every battle.$"
+
+Help_Text_DefineMoveAnimations::
+	.string "Set this option to OFF to disable\n"
+	.string "POKéMON move animations in battle.\n"
+	.string "\n"
+	.string "Additionally, pressing the A or B\n"
+	.string "Buttons will skip in-battle text\n"
+	.string "delays when this is set to OFF.$"
+
+Help_Text_DefineHpBarAnimSpeed::
+	.string "You can adjust how quickly the health\n"
+	.string "bars animate. Choose one: STANDARD,\n"
+	.string "FAST, FASTER, INSTANT.$"
+
+Help_Text_DefineExpBarAnimSpeed::
+	.string "You can adjust how quickly the\n"
+	.string "Experience bar animates. Choose\n"
+	.string "either STANDARD or INSTANT.$"
+
+Help_Text_DefineBack::
+	.string "The settings will be changed to the\n"
+	.string "selections shown in red, and you will\n"
+	.string "return to the OPTION MENU.$"
+
+Help_Text_BattleTransitions::
+	.string "BATTLE TRANSITIONS$"
+
+Help_Text_BattleIntroAnim::
+	.string "BATTLE INTRO ANIM$"
+
+Help_Text_MoveAnimations::
+	.string "MOVE ANIMATIONS$"
+
+Help_Text_HpBarAnimSpeed::
+	.string "HP BAR ANIM SPEED$"
+
+Help_Text_ExpBarAnimSpeed::
+	.string "EXP. BAR ANIM SPEED$"
+
+Help_Text_Back::
+	.string "BACK$"
+
+Help_Text_AdvancedKeys::
+	.string "ADVANCED KEYS$"
+
+Help_Text_DefineAdvancedKeys::
+	.string "Press the A Button to go to a submenu\n"
+	.string "with options to modify the difficulty\n"
+	.string "by changing experience gain or adding\n"
+	.string "additional rules onto the gameplay\n"
+	.string "experience.$"
+
+Help_Text_DefineAdvancedKeysBack::
+	.string "The settings will be changed to the\n"
+	.string "selections shown in red, and you will\n"
+	.string "return to the KEY SYSTEM MENU.$"
+
+Help_Text_UsingKeySystemSubmenu:: @ 81B5A37
+	.string " Using “ADVANCED KEYS”$"
+
+Help_Text_HowToUseKeySystemSubmenu::
+	.string "{CIRCLE_1} Select “ADVANCED KEYS” on the MENU.\n"
+	.string "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
+	.string "   Pad to select an optional item, then\n"
+	.string "   press left or right to alter the\n"
+	.string "   settings.\n"
+	.string "{CIRCLE_3} Press the A or B Button after\n"
+	.string "   making changes to go back.$"
 
 Help_Text_ExpMod::
 	.string "EXP. MODIFIER$"
@@ -2024,8 +2118,8 @@ Help_Text_DefineFRExclusives::
 Help_Text_DefineLGExclusives::
 	.string "The POKéMON exclusive to LEAFGREEN\n"
 	.string "VERSION are SANDSHREW, VULPIX,\l"
-	.string "BELLSPROUT, SLOWPOKE, BELLSPROUT,\l"
-	.string "STARYU, MAGMAR, PINSIR, MARILL,\l"
+	.string "BELLSPROUT, SLOWPOKE, STARYU,\l"
+	.string "MAGMAR, PINSIR, MARILL,\l"
 	.string "MISDREAVUS, SNEASEL, REMORAID,\l"
 	.string "MANTINE, LATIAS, and their\l"
 	.string "evolutionary relatives.$"

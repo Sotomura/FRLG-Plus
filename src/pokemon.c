@@ -7306,7 +7306,7 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
                                 //mgba_printf(MGBA_LOG_DEBUG, "About to check maxEvo's learnset for %s 's level.", ConvertToAscii(gMoveNames[(gLevelUpLearnsets[evoLine[maxEvo]][i] & LEVEL_UP_MOVE_ID)]));
                                 if((gLevelUpLearnsets[evoLine[maxEvo]][i] & LEVEL_UP_MOVE_LV) > (level << 9))
                                 { //max evo too low to know this move, remove it
-                                    //mgba_printf(MGBA_LOG_DEBUG, "Move level found is %d.", gLevelUpLearnsets[evoLine[maxEvo]][i] & LEVEL_UP_MOVE_LV);
+                                    //mgba_printf(MGBA_LOG_DEBUG, "Move level found is %d.", (gLevelUpLearnsets[evoLine[maxEvo]][i] & LEVEL_UP_MOVE_LV) >> 9);
                                     //mgba_printf(MGBA_LOG_DEBUG, "Actual mon level is %d.", level);
                                     //mgba_printf(MGBA_LOG_DEBUG, "Removing move %s in moves array.", ConvertToAscii(gMoveNames[moves[ii]]));
                                     moves[ii] = MOVE_NONE;
@@ -7319,21 +7319,36 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
                 }
             }
         }
+        //mgba_printf(MGBA_LOG_DEBUG, "Before removing gaps.");
+        //for(i = 0; i < 20; i++)
+            //mgba_printf(MGBA_LOG_DEBUG, "List Move %d is %s.", i, ConvertToAscii(gMoveNames[moves[i]]));
         for(i = 0; i < 20; i++) //compact moves to remove gaps
         {   
+            //mgba_printf(MGBA_LOG_DEBUG, "i is %d.", i);
             if(moves[i] != MOVE_NONE)
             {
+                //mgba_printf(MGBA_LOG_DEBUG, "moves[i] is not MOVE_NONE, continuing.");
                 continue;
             }
             for(j = i; j < 20; j++)
             {
+                //mgba_printf(MGBA_LOG_DEBUG, "j is %d.", j);
                 if(moves[j] == MOVE_NONE)
+                {
+                    //mgba_printf(MGBA_LOG_DEBUG, "moves[j] is MOVE_NONE, continuing.");
                     continue;
-                moves[i] = evoLine[j];
+                }
+                //mgba_printf(MGBA_LOG_DEBUG, "moves[j] is %s", ConvertToAscii(gMoveNames[moves[j]]));
+                moves[i] = moves[j];
+                //mgba_printf(MGBA_LOG_DEBUG, "moves[i] now is %s", ConvertToAscii(gMoveNames[moves[j]]));
                 moves[j] = MOVE_NONE;
+                //mgba_printf(MGBA_LOG_DEBUG, "moves[j] now is MOVE_NONE");
                 break;
             }
         }
+        //mgba_printf(MGBA_LOG_DEBUG, "After removing gaps.");
+        //for(i = 0; i < 20; i++)
+            //mgba_printf(MGBA_LOG_DEBUG, "List Move %d is %s.", i, ConvertToAscii(gMoveNames[moves[i]]));
     }
     return numMoves;
 }
@@ -7619,11 +7634,19 @@ const u32 *GetMonFrontSpritePal(struct Pokemon *mon)
 const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 personality)
 {
     u32 shinyValue;
+    shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
+
+    if (species >= 65530 && species <= 65533) //Deoxys
+    {
+        if(shinyValue < 8)
+            return gMonShinyPaletteTable[SPECIES_DEOXYS].data;
+        else
+            return gMonPaletteTable[SPECIES_DEOXYS].data;
+    }
 
     if (species > SPECIES_EGG)
         return gMonPaletteTable[0].data;
 
-    shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
     if (shinyValue < 8)
         return gMonShinyPaletteTable[species].data;
     else
@@ -7643,6 +7666,13 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     u32 shinyValue;
 
     shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
+    if (species >= 65530 && species <= 65533) //Deoxys
+    {
+        if(shinyValue < 8)
+            return &gMonShinyPaletteTable[SPECIES_DEOXYS];
+        else
+            return &gMonPaletteTable[SPECIES_DEOXYS];
+    }
     if (shinyValue < 8)
         return &gMonShinyPaletteTable[species];
     else
@@ -7788,7 +7818,19 @@ void SetWildMonHeldItem(void)
                 SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &item);
             }
             else
+            {
                 SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &gBaseStats[species].item2);
+
+                // Only underwater Gyarados can hold the DeepSeaTooth
+                if(gBaseStats[species].item2 == ITEM_DEEP_SEA_TOOTH)
+                {
+                    if(gMapHeader.mapType != MAP_TYPE_UNDERWATER)
+                    {
+                        u16 item = ITEM_NONE;
+                        SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &item);
+                    }
+                }
+            }
         }
     }
 }
@@ -7901,6 +7943,8 @@ static u16 GetDeoxysStat(struct Pokemon *mon, s32 statId)
     u16 statValue;
     u8 nature;
     u8 forme;
+    u8 ivCalcMode = gSaveBlock1Ptr->keyFlags.ivCalcMode;
+    u8 evCalcMode = gSaveBlock1Ptr->keyFlags.evCalcMode;
 
     if (gBattleTypeFlags & BATTLE_TYPE_LINK_ESTABLISHED || GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_DEOXYS)
     {
@@ -7909,9 +7953,17 @@ static u16 GetDeoxysStat(struct Pokemon *mon, s32 statId)
     else
     {
         forme = GetMonData(mon, MON_DATA_FORME, NULL);
-
         ivVal = GetMonData(mon, MON_DATA_HP_IV + statId, NULL);
         evVal = GetMonData(mon, MON_DATA_HP_EV + statId, NULL);
+        if(!FlagGet(FLAG_SYS_IS_LINKING) || !(gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER))
+        {   // Deoxys can't enter Battle Tower anyway, but checked just in case.
+            if(ivCalcMode == IV_CALC_PERFECT)
+                ivVal = 31;
+            if(ivCalcMode == IV_CALC_ZERO)
+                ivVal = 0;
+            if(evCalcMode == EV_CALC_ZERO)
+                evVal = 0;
+        }
         statValue = ((sDeoxysBaseStats[forme][statId] * 2 + ivVal + evVal / 4) * mon->level) / 100 + 5;
         nature = GetNature(mon);
         statValue = ModifyStatByNature(nature, statValue, (u8)statId);

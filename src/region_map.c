@@ -949,7 +949,7 @@ static const u8 *const sMapNames[] = {
     [MAPSEC_INSIDE_OF_TRUCK] = gMapSecName_InsideOfTruck,
     [MAPSEC_SKY_PILLAR] = gMapSecName_SkyPillar,
     [MAPSEC_SECRET_BASE] = gMapSecName_SecretBase,
-    [MAPSEC_DYNAMIC] = gMapSecName_None,
+    [MAPSEC_DYNAMIC] = gMapSecName_Ferry,
     [MAPSEC_PALLET_TOWN         ] = gMapSecName_PalletTown,
     [MAPSEC_VIRIDIAN_CITY       ] = gMapSecName_ViridianCity,
     [MAPSEC_PEWTER_CITY         ] = gMapSecName_PewterCity,
@@ -4608,7 +4608,7 @@ u8 *GetMapName(u8 *dst0, u16 mapsec, u16 fill)
 {
     u8 *dst;
     u32 i;
-    u16 idx;;
+    u16 idx;
     if ((idx = mapsec) < MAPSEC_NONE )
     {
         if (IsCeladonDeptStoreMapsec(mapsec) == TRUE)

@@ -187,16 +187,6 @@ CinnabarIsland_Movement_BillExitToPokeCenter:: @ 81670AB
 	walk_down
 	step_end
 
-CinnabarIsland_Movement_BillExitToPokeCenter2:: @ 81670AB
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
 CinnabarIsland_EventScript_BillReturnToPokeCenter:: @ 81670B3
 	applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_Movement_PlayerWatchBillExit
 	applymovement LOCALID_BILL, CinnabarIsland_Movement_BillApproachDoor

@@ -528,10 +528,10 @@
 #define FLAG_HIDE_SAFARI_ZONE_NORTHEAST_GLITTER_MAIL            0x202 //New
 #define FLAG_HIDE_ARTISAN_CAVE_B1F_HP_UP                        0x203 //New
 #define FLAG_HIDE_ARTISAN_CAVE_B1F_CARBOS                       0x204 //New
+#define FLAG_HIDE_CELADON_CITY_SUN_STONE                        0x205 //New
 
 // Unused?
-#define FLAG_POKERUS_EXPLAINED   0x205 //New
-#define FLAG_0x206               0x206
+#define FLAG_POKERUS_EXPLAINED                                  0x206 //New for this fork/branch
 #define FLAG_0x207               0x207
 #define FLAG_0x208               0x208
 #define FLAG_0x209               0x209
@@ -1341,7 +1341,7 @@
 #define FLAG_SYS_SPECIAL_WILD_BATTLE                                (SYS_FLAGS + 0x7)
 
 #define FLAG_SYS_QL_DEPARTED                                        (SYS_FLAGS + 0x8)
-#define FLAG_0x809                                                  (SYS_FLAGS + 0x9)
+#define FLAG_SYS_IN_OPTIONS_MENU                                    (SYS_FLAGS + 0x9)
 #define FLAG_0x80A                                                  (SYS_FLAGS + 0xA)
 #define FLAG_0x80B                                                  (SYS_FLAGS + 0xB)
 #define FLAG_0x80C                                                  (SYS_FLAGS + 0xC)
